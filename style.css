@@ -1,0 +1,101 @@
+* {
+    box-sizing: inherit;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 720px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box {
+    width: 100%;
+    color: #fff;
+    display: block;
+    background-color: #0c0c0c;
+    border-radius: 10px;
+    transition: transform 1s ease-in-out,
+                box-shadow 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.box .header {
+    background-color: rgb(80, 80, 80);
+    padding: 8px 20px;
+    border-radius: 10px 10px 0 0;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out,
+                box-shadow 1s ease-in-out;
+}
+
+.box .header .circle:nth-child(1) {
+    background-color: red;
+}
+
+.box .header .circle:nth-child(2) {
+    background-color: orange;
+}
+
+.box .header .circle:nth-child(3) {
+    background-color: green;
+}
+
+.box .header .circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+    transition: transform 1s ease-in-out,
+                box-shadow 1s ease-in-out;
+}
+
+.content {
+    background-color: rgb(29, 29, 29);
+    padding: 150px 30px;
+    text-align: center;
+}
+
+.content h1 {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 72px;
+    transition: transform 1s ease-in-out,
+                text-shadow 1s ease-in-out;
+}
+
+
+
+/* All hover isometric magic
+---------------------------- */
+.container:hover .box {
+    transform: rotateX(60deg)
+                rotateY(0)
+                rotateZ(-45deg)
+                scale(0.75);
+    box-shadow: -50px 60px 10px rgba(0,0,0,0.5);
+}
+
+.container:hover .box .header {
+    transform: translate3d(0, 0, 30px);
+    box-shadow: -50px 60px 10px rgba(0,0,0,0.5);
+}
+
+.container:hover .box .header .circle {
+    transform: translate3d(0, 0, 30px);
+    box-shadow: -50px 60px 10px rgba(0,0,0,0.5);
+}
+
+.container:hover .box .content h1 {
+    transform: translate3d(0, 0, 30px);
+    text-shadow: -50px 60px 10px rgba(0,0,0,0.5);
+}
