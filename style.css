@@ -63,6 +63,7 @@ html, body {
     background-color: rgb(29, 29, 29);
     padding: 150px 30px;
     text-align: center;
+    border-radius: 0 0 10px 10px;
 }
 
 .content h1 {
